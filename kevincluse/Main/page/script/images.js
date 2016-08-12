@@ -1,0 +1,2 @@
+
+    $('.fancybox-image').fancybox({});

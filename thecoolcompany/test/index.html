@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Index </title>
+</head>
+
+<body>
+<script>jQuery(document).ready(function(e) { jQuery("#submit-button").click(function(e){ jQuery("#main-div-parts").hide();}); });</script>
+<div id="main-div-parts">
+  <div class="row padding_10">
+    <div class="col-md-6">
+      <div class="form-group">[email* email id:inputEmail class:form-control placeholder "Enter email *"]</div>
+      <div class="form-group">[text* f_name id:f_name class:form-control placeholder "First name *"]</div>
+      <div class="form-group">[text* l_name id:l_name class:form-control placeholder "Last name *"]</div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group ">
+        <div class="row">
+          <div class="col-md-9">[text* reffer_link id:reffer_link class:form-control placeholder "Refer Link *"]</div>
+          <div class="col-md-2"><a class="btn btn-default" href="http://www.ezgeekme.com/" role="button" style="margin:0px;">Link</a></div>
+        </div>
+      </div>
+      <div class="form-group">[select coutrylist id:coutrylist class:form-control first_as_label "Select Country" "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla" "Antarctica" "Antigua and Barbuda" "Argentina" "Armenia" "Arctic Ocean" "Aruba" "Ashmore and Cartier Islands" "Atlantic Ocean" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Baker Island" "Bangladesh" "Barbados" "Bassas da India" "Belarus" "Belgium" "Belize" "Benin" "Bermuda" "Bhutan" "Bolivia" "Bosnia and Herzegovina" "Botswana" "Bouvet Island" "Brazil" "British Virgin Islands" "Brunei" "Bulgaria" "Burkina Faso" "Burundi" "Cambodia" "Cameroon" "Canada" "Cape Verde" "Cayman Islands" "Central African Republic" "Chad" "Chile" "China" "Christmas Island" "Clipperton Island" "Cocos Islands" "Colombia" "Comoros" "Cook Islands" "Coral Sea Islands" "Costa Rica" "Cote d'Ivoire" "Croatia" "Cuba" "Cyprus" "Czech Republic" "Denmark" "Democratic Republic of the Congo" "Djibouti" "Dominica" "Dominican Republic" "East Timor" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Ethiopia" "Europa Island" "Falkland Islands (Islas Malvinas)" "Faroe Islands" "Fiji" "Finland" "France" "French Guiana" "French Polynesia" "French Southern and Antarctic Lands" "Gabon" "Gambia" "Gaza Strip" "Georgia" "Germany" "Ghana" "Gibraltar" "Glorioso Islands" "Greece" "Greenland" "Grenada" "Guadeloupe" "Guam" "Guatemala" "Guernsey" "Guinea" "Guinea-Bissau" "Guyana" "Haiti" "Heard Island and McDonald Islands" "Honduras" "Hong Kong" "Howland Island" "Hungary" "Iceland" "India" "Indian Ocean" "Indonesia" "Iran" "Iraq" "Ireland" "Isle of Man" "Israel" "Italy" "Jamaica" "Jan Mayen" "Japan" "Jarvis Island" "Jersey" "Johnston Atoll" "Jordan" "Juan de Nova Island" "Kazakhstan" "Kenya" "Kingman Reef" "Kiribati" "Kerguelen Archipelago" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Macau" "Macedonia" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Marshall Islands" "Martinique" "Mauritania" "Mauritius" "Mayotte" "Mexico" "Micronesia" "Midway Islands" "Moldova" "Monaco" "Mongolia" "Montenegro" "Montserrat" "Morocco" "Mozambique" "Myanmar" "Namibia" "Nauru" "Navassa Island" "Nepal" "Netherlands" "Netherlands Antilles" "New Caledonia" "New Zealand" "Nicaragua" "Niger" "Nigeria" "Niue" "Norfolk Island" "North Korea" "North Sea" "Northern Mariana Islands" "Norway" "Oman" "Pacific Ocean" "Pakistan" "Palau" "Palmyra Atoll" "Panama" "Papua New Guinea" "Paracel Islands" "Paraguay" "Peru" "Philippines" "Pitcairn Islands" "Poland" "Portugal" "Puerto Rico" "Qatar" "Reunion" "Republic of the Congo" "Romania" "Russia" "Rwanda" "Saint Helena" "Saint Kitts and Nevis" "Saint Lucia" "Saint Pierre and Miquelon" "Saint Vincent and the Grenadines" "Samoa" "San Marino" "Sao Tome and Principe" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Georgia and the South Sandwich Islands" "South Korea" "Spain" "Spratly Islands" "Sri Lanka" "Sudan" "Suriname" "Svalbard" "Swaziland" "Sweden" "Switzerland" "Syria" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Togo" "Tokelau" "Tonga" "Trinidad and Tobago" "Tromelin Island" "Tunisia" "Turkey" "Turkmenistan" "Turks and Caicos Islands" "Tuvalu" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "USA" "Uruguay" "Uzbekistan" "Vanuatu" "Venezuela" "Viet Nam" "Virgin Islands" "Wake Island" "Wallis and Futuna" "West Bank" "Western Sahara" "Yemen" "Yugoslavia" "Zambia" "Zimbabwe"]</div>
+      <div class="form-group">[select cat_plan id:catPlan class:form-control first_as_label "Select Plan" "$25 submission fee"] </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">[checkbox* inputAccept "I'd like to sign up for the beauty n strength mailing list and accept the privacy policy*"] </div>
+      <div class="form-group">[file* file-117]</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"> [submit id:submit-button class:btn class:btn-danger "Submit"]</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <p>
+    <input type="radio" name="category" value="1" checked/>
+    $25 submission fee</p>
+  <div class="col-md-6">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="1squarebiz@gmail.com">
+      <input type="hidden" name="lc" value="US">
+      <input type="hidden" name="item_name" value="1 Traveler">
+      <input type="hidden" name="button_subtype" value="services">
+      <input type="hidden" name="on0" value="1 Traveler">
+      <select name="os0" class="textfeild1" style="display:none;">
+        <option value="Full">25$</option>
+      </select>
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="option_select0" value="Full">
+      <input type="hidden" name="option_amount0" value="25">
+      <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" width="1" height="1">
+    </form>
+  </div>
+</div>
+</body>
+</html>

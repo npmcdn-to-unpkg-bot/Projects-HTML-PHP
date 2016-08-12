@@ -1,0 +1,53 @@
+/* CSS Document */
+#menu-view-show{ display:none;}
+#geneva-list-menu{ display:block;}
+@media (min-width: 800px) and (max-width: 840px) {	
+#geneva-window{position:relative; top:inherit; right:inherit;}
+#geneva-list-menu{ width:auto; display:block; background-color:#3A3A3A; top:inherit; right:inherit; position:inherit; margin-top:200px; left:inherit;}
+.jspPane{ position:relative; width:100%;}	
+.jspContainer{ padding:14px;}
+
+
+.new-menu-class li{position:absolute !important;}	
+#geneva{ height:auto;display: table; padding:10px;}	
+div.main{ width:100%; padding:0px;}
+#geneva-box-menu{margin:0; width:100%;}	
+#geneva-box-menu li{float: left;position: sticky;width: 33%;}
+}
+@media (min-width: 522px) and (max-width: 800px) {
+#geneva-window{position:relative; top:inherit; right:inherit;}
+#geneva-list-menu{ width:auto; display:block; background-color:#3A3A3A; top:inherit; right:inherit; position:inherit; margin-top:200px; left:inherit;}
+.jspPane{ position:relative; width:100%;}	
+.jspContainer{ padding:14px;}	
+	
+	
+	
+div.main{ width:100%; padding:0px;}	
+.new-menu-class li{position:absolute !important;}	
+#geneva{ height:auto;display: table;padding:10px; width:96%;}		
+#geneva-box-menu{margin:0; width:100%;}	
+.new-menu-class li{position:absolute;}
+#geneva-box-menu li{float: left;position: inherit; margin:4px;width: 48%; background-color:#3a3a3a; background-position:top right; border:1px solid #000000;}	
+#geneva-box-menu li:hover, #geneva-box-menu li.selected{background-color:#cc0000;background-position: right -180px;}
+}
+@media (min-width: 100px) and (max-width: 522px) {
+#menu-view-show{ margin-top:200px; width:100%; text-align:left; padding-left:40px; background-color:#8b8b8b; font-weight:bold; color:#333; padding-top:10px; padding-bottom:10px; cursor:pointer; background-image:url(../../image/menu_pull_down.png); background-repeat:no-repeat; background-size:24px; background-position:12px 7px;}	
+#geneva-window{position:relative; top:inherit; right:inherit;}
+#geneva-list-menu{ display:none; width:auto; background-color:#3A3A3A; top:inherit; right:inherit; position:inherit; margin-top:10px; left:inherit;}
+.jspPane{ position:relative;}
+.jspContainer{ padding:14px;}		
+	
+	
+div.main{padding:0px;width:100%; }	
+.new-menu-class li{position:absolute !important;}	
+#geneva{ height:auto; display: table; padding-top:12px; padding-bottom:12px;width:99.6%; }	
+#geneva-box-menu{ margin:0px; width:100%;}	
+#geneva-box-menu li{float: left;position: inherit; margin-bottom:4px; width: 100%; background-color:#3a3a3a; background-position:top right; border:1px solid #000000;}	
+#geneva-box-menu li.selected{margin-left:-20px;}
+#geneva-box-menu li:hover, #geneva-box-menu li.selected{background-color:#cc0000;background-position: right -180px;}
+#geneva-list-menu li a{ margin:auto;}
+.page-start{ max-width:260px; overflow:scroll;}
+.layout-right{ float:left; clear:both;}
+.layout-6040-right{float:left; clear:both;}
+.pricing-grid{ max-width:260px; overflow:scroll;}
+}

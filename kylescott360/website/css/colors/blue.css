@@ -1,0 +1,56 @@
+/*
+Blue Color
+light blue #3498db
+blue #2980b9
+*/
+.killua hr {
+	border-bottom:1px solid rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua a {
+	color:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua a:hover {
+	color:#000000;
+}
+.killua header,
+.killua footer {
+	background:rgba(132,114,114,0.10)
+}
+.killua .color-change {
+	color:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua .label {
+	color:#524641;
+}
+.killua .inside-icon .icon {
+    color:#3498db;
+}
+/* btn class*/
+.killua .btn {
+	background:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua .btn:hover {
+	background:#000000;
+	color:#FBFBFB;
+}
+.killua .btn:active {
+	background:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+
+.killua .checkbox label i,
+.killua .radio label i {
+	border:2px solid rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+	color:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua .radio label i:after{
+	background:#9F8C79;
+}
+.killua .select i {
+	color:rgba(90,86,86,0.60);rgba(90,86,86,0.6);
+}
+.killua  .tooltip {
+	background: #9F8C79;
+}
+.killua  .tooltip::after {
+	border-bottom-color:rgba(90,86,86,0.60);
+}
