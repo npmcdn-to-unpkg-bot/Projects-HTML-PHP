@@ -1,576 +1,127 @@
-<?php
-/* Template Name: Dream-Trip-to-Beijing-China-Payment
- * Develope by:siddharth singh
- * Email:siddharthsingh91@gmail.com
- * Author url:fileworld.in
- * @link http://fileworld.in
- * @package Siddharth Singh
- * @subpackage Siddharth Custom page
- * @since Custom Page 1.0
- */ 
- get_header(); ?>
-<script src="<?php bloginfo('template_directory'); ?>/js/sidd-barcelona.js" type="text/javascript"></script>
-<?php
-	if(!empty($_POST)) {
-	$data = $_POST;
-	$os0 = $_POST["os0"];
-	$planText = "Select Plan One";
-	if($os0 == "" || $os0 == 0)
-	{
-	$os0 = $_POST["os1"];
-	$planText = "Select Plan Two";
-	if($os0 == "" || $os0 == 0){
-	$os0 = $_POST["os2"];
-	$planText = "Select Plan three";
-	if($os0 == "" || $os0 == 0){
-	$os0 = $_POST["os3"];
-	$planText = "Select Plan four";
-	
-	if($os0 == "" || $os0 == 0){
-	$os0 = $_POST["os4"];
-	$planText = "Select Plan five";
-	
-	if($os0 == "" || $os0 == 0){
-	$os0 = $_POST["os5"];
-	$planText = "Select Plan six";
-	}
-	}
-	
-	}
-	
-	}
-	}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
 
-  //$os0 = "0.1"; // testing
+<body>
 
-  $first_name = $_POST["first_name"];
-  $last_name = $_POST["last_name"];
-  $name = $first_name." ".$last_name;
+<style>
+h1,h2,h3,h4,h5,h6,p{ text-align:center;}
+h1,h2,h3,h4{ color:#F00;}
+</style>
+<div class="section">
+<h1>Dream Trip to Dubai 2017</h1>
+<p>A 6-Day 5-Night Odyssey in the Land of 1001 Wonders</p><br/>
+ 
+<strong>April 4-10, 2017, Spring Week</strong>
+<strong>Participation is unrestrictive; space is limited.</strong><br/>
 
-  $card_number = $_POST["card_number"];
-  $card_password = $_POST["card_password"];
-  $exp_month = $_POST["exp_month"];
-  $exp_year = $_POST["exp_year"];
-  if(strlen($exp_year) != 2)
-    $exp_year = substr($exp_year,-2);
+<h1>$<strong>2,985 </strong></h1>
+<h4>per person in double occupancy.</h4><br/>
 
-  //Uncomment the endpoint desired.
-//Production URL
-$url = 'https://www.myvirtualmerchant.com/VirtualMerchant/process.do';
-//Demo URL
-//$url = 'https://demo.myvirtualmerchant.com/VirtualMerchantDemo/process.do';
-//Configuration parameters.
-$ssl_merchant_id = "609925";//"004842";609925
-$ssl_user_id = "Webpage";//"webpage";Webpage
-$ssl_pin = "6241";//"Q7D7F8";6241
-$ssl_show_form = 'false';
-$ssl_result_format = 'HTML';
-$ssl_test_mode = 'false ';
-$ssl_receipt_link_method = 'REDG';
-$ssl_receipt_link_url = 'http://traveloganza.com/t.php';
-$ssl_transaction_type = 'CCSALE';
-$ssl_cvv2cvc2_indicator = '1';
-$ssl_first_name = $first_name;
-$ssl_last_name = $last_name;
+<p>This Early Bird fare is available until only for the first 60 registrants.
+Higher regular fare will apply immediately thereafter, once the quota is filled.</p>
 
-$ssl_card_number = $card_number;
-$ssl_exp_date = $exp_month.$exp_year;
-$ssl_amount = $os0;
-$ssl_cvv2cvc2 = $card_password;
+<h1>Deposit: $585</h1>
+<p>A $585-deposit holds your package, at current fare, until February 7, 2017.</p>
 
 
-$data = "";
-$data = "Client Name: $first_name $last_name\n\nCharge: $os0\n\nPlain: $planText";
-file_put_contents("test.txt", $data);
-//die;
+<h2>Registrations and Payments:</h2>
+<p>All registrations and payments close on February 7, 2017</p>
+<p>Registration is not valid, unless a full deposit ($585) is paid.</p>
+<p>Card payments are subject to a 3% processing fee.</p>
+<br/>
 
-//Declares base URL in the event that you are using the VM payment form.
-if($ssl_show_form == 'true')
-{
-echo "<html><head><base href='" . $url . "'></base></head>";
-}
-//Dynamically builds POST request based on the information being passed into the script.
-$queryString = "";
-foreach($_REQUEST as $key => $value)
-{
-if($queryString != "")
-{
-$queryString .= "&";
-}
-$queryString .= $key . "=" . urlencode($value);
-}
+<h2>Inclusive:</h2>
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $queryString .
-"&ssl_merchant_id=$ssl_merchant_id".
-"&ssl_user_id=$ssl_user_id".
-"&ssl_pin=$ssl_pin".
-"&ssl_transaction_type=$ssl_transaction_type".
-"&ssl_cvv2cvc2_indicator=$ssl_cvv2cvc2_indicator".
-"&ssl_cvv2cvc2=$ssl_cvv2cvc2".
-"&ssl_show_form=$ssl_show_form".
-"&ssl_result_format=$ssl_result_format".
-"&ssl_test_mode=$ssl_test_mode".
-"&ssl_receipt_link_method=$ssl_receipt_link_method".
-"&ssl_card_number=$ssl_card_number".
-"&ssl_exp_date=$ssl_exp_date".
-"&ssl_amount=$ssl_amount".
-"&ssl_first_name=$ssl_first_name".
-"&ssl_last_name=$ssl_last_name".
-"&ssl_receipt_link_url=$ssl_receipt_link_url");
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($ch, CURLOPT_VERBOSE, true);
-$result = curl_exec($ch);
-curl_close($ch);
-
-die;
-}
+<p>Round trip from Newark, New Jersey</p>
+<p>5-star luxury accommodation</p>
+<p>First-class luxury land transportation</p>
+<p>Airport transfers</p>
+<p>Excursions</p>
+<p>Daily cultural and shopping tours</p>
+<p>All meals, except lunch</p>
+<p>Daily dinner shows</p>
+<p>Welcome lunch</p>
+<p>Farewell gala</p>
 
 
- ?>
+<br/>
+<h4>Optional:</h4>
 
-<div class="row margin-bottom-60 margin-side-none"> 
-  <!--Heading top start-->
-  <?php get_template_part( 'secondary', 'menu' ); ?>
-  <!--Heading top end-->
-  
-  <div class="container  margin-bottom-60" role="main">
-    <div class="row"> 
-      <!--left section start-->
-      <?php get_template_part( 'left', 'sidebar' );?>
-      <!--left section end--> 
-      
-      <!--Main contant start-->
-      <div class="col-md-6">
-        <div class="section">
-          <div class="style7" align="center">Dream Trip To Beijing China Payment <br />
-            OCTOBER 03 - 10, 2016</div>
-          <p class="blogtitle" align="center">Pay by PayPal</p>
-          <div align="center"><img src="<?php bloginfo('template_directory'); ?>/images/paypal.jpg" /> </div>
-          <div align="center"> If you have a PayPal account, use this option to make a payment. <br />
-          </div>
-          <div>&nbsp;</div>
-          Payment Plan a start
-          <div class="payment-plan-a">
-            <h1>PAYMENT, Plan A (Early Bird)</h1>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="1 Traveler">
-              <input type="hidden" name="button_subtype" value="services">
-              <div align="left">
-                <input type="hidden" name="on0" value="1 Traveler">
-                <strong>1 Traveler</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $2,975.00 USD</option>
-                  <option value="1st Deposit">Or: 1st Deposit: $725 USD</option>
-                  <option value="Full Balance">Full Balance: $2,250 USD</option>
-                  <option value="2st deposit">2st deposit $750.00 USD</option>
-                  <option value="3st deposit">3st deposit $750.00 USD</option>
-                  <option value="4st deposit">4st deposit $750.00 USD</option>
-                  <option value="OPTIONAL Single occupancy">OPTIONAL Single occupancy:$680 (additional) USD</option>
-                  <option value="CME for Physicians">CME for Physicians:$300 USD</option>
-                  <option value="CEU/CME for non-Physicians">CEU/CME for non-Physicians:$200  USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full payment">
-              <input type="hidden" name="option_amount0" value="3064.25">
-              <input type="hidden" name="option_select1" value="Or: 1st Deposit">
-              <input type="hidden" name="option_amount1" value="746.75">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="746.75">
-              <input type="hidden" name="option_select5" value="2st deposit">
-              <input type="hidden" name="option_amount5" value="772.5">
-              <input type="hidden" name="option_select6" value="3nd deposit">
-              <input type="hidden" name="option_amount6" value="772.5">
-              <input type="hidden" name="option_select7" value="4rd deposit">
-              <input type="hidden" name="option_amount7" value="772.5">
-              <input type="hidden" name="option_select8" value="OPTIONAL Single occupancy">
-              <input type="hidden" name="option_amount8" value="700.4">
-              <input type="hidden" name="option_select8" value="CME for Physicians">
-              <input type="hidden" name="option_amount8" value="309">
-              <input type="hidden" name="option_select8" value="CEU/CME for non-Physicians">
-              <input type="hidden" name="option_amount8" value="206">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div>&nbsp;</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="2 Travelers">
-              <input type="hidden" name="button_subtype" value="services">
-              <input type="hidden" name="no_note" value="0">
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-              <div align="left">
-                <input type="hidden" name="on0" value="2 Travelers">
-                <strong>2 Travelers</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $5,950.00 USD</option>
-                  <option value="OR 1st Deposit">OR 1st Deposit: $1,450.00 USD</option>
-                  <option value="Full Balance">Full Balance: $4,500.00 USD</option>
-                  <option value="2st deposit">OR 2st deposit $1,500.00 USD</option>
-                  <option value="3nd deposit">3nd deposit $1,500.00 USD</option>
-                  <option value="4rd deposit">4nd deposit $1,500.00 USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full  payment">
-              <input type="hidden" name="option_amount0" value="6128.5">
-              <input type="hidden" name="option_select1" value="OR 1st Deposit">
-              <input type="hidden" name="option_amount1" value="1493.5">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="4635">
-              <input type="hidden" name="option_select3" value="2nd deposit">
-              <input type="hidden" name="option_amount3" value="1545.00">
-              <input type="hidden" name="option_select4" value="3nd deposit">
-              <input type="hidden" name="option_amount4" value="1545.00">
-              <input type="hidden" name="option_select5" value="4rd deposit">
-              <input type="hidden" name="option_amount5" value="1545.00">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div>&nbsp;</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="2 Travelers">
-              <input type="hidden" name="button_subtype" value="services">
-              <input type="hidden" name="no_note" value="0">
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-              <div align="left">
-                <input type="hidden" name="on0" value="2 Travelers">
-                <strong>3 Travelers</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $8,925.00 USD</option>
-                  <option value=">OR  1st Deposit">OR  1st Deposit:$2,175.00 USD</option>
-                  <option value="Full Balance">Full Balance $6,750.00 USD</option>
-                  <option value="2nd deposit">OR 2nd deposit $2,250.00 USD</option>
-                  <option value="3nd deposit">3nd deposit $2,250.00 USD</option>
-                  <option value="4rd deposit">4nd deposit $2,250.00 USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full  payment">
-              <input type="hidden" name="option_amount0" value="9192.75">
-              <input type="hidden" name="option_select1" value=">OR  1st Deposit">
-              <input type="hidden" name="option_amount1" value="2240.25">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="6952.5">
-              <input type="hidden" name="option_select3" value="OR 2nd deposit">
-              <input type="hidden" name="option_amount3" value="2317.5">
-              <input type="hidden" name="option_select4" value="3nd deposit">
-              <input type="hidden" name="option_amount4" value="2317.5">
-              <input type="hidden" name="option_select5" value="4rd deposit">
-              <input type="hidden" name="option_amount5" value="2317.5">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-          </div>
-          <!--Payment Plan b end--> 
-          
-          <!--Payment Plan a start-->
-          <div class="payment-plan-b">
-            <h1>PAYMENT, Plan B (Regular)</h1>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="1 Traveler">
-              <input type="hidden" name="button_subtype" value="services">
-              <div align="left">
-                <input type="hidden" name="on0" value="1 Traveler">
-                <strong>1 Traveler</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $3,185.00 USD</option>
-                  <option value="1st Deposit">1st Deposit $725 USD</option>
-                  <option value="Full Balance">Full Balance $2,460  USD</option>
-                  <option value="OR 2nd Deposit">OR 2nd Deposit $750.00 USD</option>
-                  <option value="3rd deposit">3rd deposit $750.00 USD</option>
-                  <option value="4th deposit">4th deposit $750.00 USD</option>
-                  <option value="5th deposit">5th deposit $210.00 USD</option>
-                  <option value="OPTIONAL: Single occupancy:">OPTIONAL: Single occupancy: $680 (additional) USD</option>
-                  <option value="CME for Physicians	">CME for Physicians $300.00 USD</option>
-                  <option value="CEU/CME for non-Physicians">CEU/CME for non-Physicians $200.00 USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full payment">
-              <input type="hidden" name="option_amount0" value="3280.55">
-              <input type="hidden" name="option_select1" value="1st Deposit">
-              <input type="hidden" name="option_amount1" value="746.75">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="2533.8">
-              <input type="hidden" name="option_select5" value="OR 2nd deposit">
-              <input type="hidden" name="option_amount5" value="772.5">
-              <input type="hidden" name="option_select6" value="3rd deposit">
-              <input type="hidden" name="option_amount6" value="772.5">
-              <input type="hidden" name="option_select7" value="4th deposit">
-              <input type="hidden" name="option_amount7" value="772.5">
-              <input type="hidden" name="option_select8" value="5th deposit">
-              <input type="hidden" name="option_amount8" value="216.3">
-              <input type="hidden" name="option_select9" value="OPTIONAL: Single occupancy">
-              <input type="hidden" name="option_amount9" value="700.4">
-              <input type="hidden" name="option_select9" value="CME for Physicians">
-              <input type="hidden" name="option_amount9" value="309">
-              <input type="hidden" name="option_select9" value="CEU/CME for non-Physicians">
-              <input type="hidden" name="option_amount9" value="206">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div>&nbsp;</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="2 Travelers">
-              <input type="hidden" name="button_subtype" value="services">
-              <input type="hidden" name="no_note" value="0">
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-              <div align="left">
-                <input type="hidden" name="on0" value="2 Travelers">
-                <strong>2 Travelers</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $6,370.00 USD</option>
-                  <option value="OR 1st Deposit">OR 1st Deposit: $1,450.00 USD</option>
-                  <option value="Full Balance">Full Balance: $4,920.00 USD</option>
-                  <option value="2st deposit">OR 2st deposit $1,500.00 USD</option>
-                  <option value="3nd deposit">3nd deposit $1,500.00 USD</option>
-                  <option value="4th deposit">4th deposit $1,500.00 USD</option>
-                  <option value="5th deposit">5th deposit $1,500.00 USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full  payment">
-              <input type="hidden" name="option_amount0" value="6561.1">
-              <input type="hidden" name="option_select1" value="OR 1st Deposit">
-              <input type="hidden" name="option_amount1" value="1493.5">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="5067.6">
-              <input type="hidden" name="option_select3" value="2nd deposit">
-              <input type="hidden" name="option_amount3" value="1545.00">
-              <input type="hidden" name="option_select4" value="3nd deposit">
-              <input type="hidden" name="option_amount4" value="1545.00">
-              <input type="hidden" name="option_select5" value="4rd deposit">
-              <input type="hidden" name="option_amount5" value="1545.00">
-              <input type="hidden" name="option_select5" value="5th deposit">
-              <input type="hidden" name="option_amount5" value="432.6">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div>&nbsp;</div>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick">
-              <input type="hidden" name="business" value="accounts@traveloganza.com">
-              <input type="hidden" name="lc" value="US">
-              <input type="hidden" name="item_name" value="2 Travelers">
-              <input type="hidden" name="button_subtype" value="services">
-              <input type="hidden" name="no_note" value="0">
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-              <div align="left">
-                <input type="hidden" name="on0" value="2 Travelers">
-                <strong>3 Travelers</strong>
-                <select name="os0" class="textfeild1">
-                  <option value="Full payment">Full payment $9,555.00 USD</option>
-                  <option value=">OR  1st Deposit">OR  1st Deposit:$2,175.00 USD</option>
-                  <option value="Full Balance">Full Balance $7,380.00 USD</option>
-                  <option value="2nd deposit">OR 2nd deposit $2,250.00 USD</option>
-                  <option value="3rd deposit">3rd deposit $2,250.00 USD</option>
-                  <option value="4th deposit">4th deposit $2,250.00 USD</option>
-                  <option value="5th deposit">5th deposit $750.00 USD</option>
-                </select>
-              </div>
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="option_select0" value="Full  payment">
-              <input type="hidden" name="option_amount0" value="9841.65">
-              <input type="hidden" name="option_select1" value=">OR  1st Deposit">
-              <input type="hidden" name="option_amount1" value="2240.25">
-              <input type="hidden" name="option_select2" value="Full Balance">
-              <input type="hidden" name="option_amount2" value="7601.4">
-              <input type="hidden" name="option_select3" value="OR 2nd deposit">
-              <input type="hidden" name="option_amount3" value="2317.5">
-              <input type="hidden" name="option_select4" value="3rd deposit">
-              <input type="hidden" name="option_amount4" value="2317.5">
-              <input type="hidden" name="option_select5" value="4th deposit">
-              <input type="hidden" name="option_amount5" value="2317.5">
-              <input type="hidden" name="option_select5" value="5th deposit">
-              <input type="hidden" name="option_amount5" value="772.5">
-              <input type="hidden" name="option_index" value="0">
-              <input type="image" src="<?php bloginfo('template_directory'); ?>/images/paynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-          </div>
-          
-          <!--credit card payment start-->
-          <form  id="payment-form1" method="post">
-            <span class="payment-errors"></span>
-            <h1>PAYMENT, Plan A (Early Bird)</h1>
-            <div class="form-row"><strong>Select 1 Traveler</strong>:<br />
-              <select name="os0" class="textfeild1" id="my_select_plan">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="3064.25">Full payment $2,975.00 USD</option>
-                <option value="746.75">Or:1st Deposit:$725.00 USD</option>
-                <option value="2317.5">Full Balance:  $2,250.00 USD</option>
-                <option value="772.5">OR 2nd deposit $750.00 USD</option>
-                <option value="772.5">3rd deposit $750.00 USD</option>
-                <option value="772.5">4th deposit $750.00 USD</option>
-                
-                <option value="700.4">Single occupancy: $680 USD(additional)</option>
-                <option value="309">CME for Physicians: $300 USD(additional)</option>
-                <option value="206">CEU/CME for non-Physicians: $200 USD(additional)</option>
-              </select>
-            </div>
-            <br />
-            <strong>OR</strong><br />
-            <br />
-            <div class="form-row"><strong>Select 2 Travelers</strong>:<br />
-              <select name="os1" class="textfeild1" id="my_select_plan_two">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="6128.5">Full payment $5,950.00 USD</option>
-                <option value="1493.5">Or:1st Deposit:$1,450.00 USD</option>
-                <option value="4635">Full Balance:  $4,500.00 USD</option>
-                <option value="1545">OR 2nd deposit $1500.00 USD</option>
-                <option value="1545">3rd deposit $1500.00 USD</option>
-                <option value="1545">4th deposit $1500.00 USD</option>
-              </select>
-            </div>
-            <!--Plan A end--> 
-            
-            <strong>OR</strong><br />
-            <br />
-            <div class="form-row"><strong>Select 3 Travelers</strong>:<br />
-              <select name="os2" class="textfeild1" id="my_select_plan_three">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="9192.75">Full payment $8,925.00 USD</option>
-                <option value="2240.25">Or:1st Deposit:$2,175.00 USD</option>
-                <option value="6952.5">Full Balance:  $6,750.00 USD</option>
-                <option value="2317.5">OR 2nd deposit $2,250.00 USD</option>
-                <option value="2317.5">3rd deposit $2,250.00 USD</option>
-                <option value="2317.5">4th deposit $2,250.00 USD</option>
-              </select>
-            </div>
-            <!--Plan A end--> 
-            
-            <br />
-            <br />
-            
-            <!--Plan A start-->
-            <h1>PAYMENT, Plan B (Regular)</h1>
-                   <div class="form-row"><strong>Select 1 Traveler</strong>:<br />
-              <select name="os3" class="textfeild1" id="my_select_plan_four">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="3280.55">Full payment $3,185.00 USD</option>
-                <option value="746.75">Or:1st Deposit:$725.00 USD</option>
-                <option value="2533.8">Full Balance:  $2,460.00 USD</option>
-                <option value="772.5">OR 2nd deposit $750.00 USD</option>
-                <option value="772.5">3rd deposit $750.00 USD</option>
-                <option value="772.5">4th deposit $750.00 USD</option>
-                <option value="216.3">4th deposit $210.00 USD</option>
-                
-                <option value="700.4">Single occupancy: $680 USD(additional)</option>
-                <option value="309">CME for Physicians: $300 USD(additional)</option>
-                <option value="206">CEU/CME for non-Physicians: $200 USD(additional)</option>
-              </select>
-            </div>
-            <br />
-            <strong>OR</strong><br />
-            <br />
-            <div class="form-row"><strong>Select 2 Travelers</strong>:<br />
-              <select name="os4" class="textfeild1" id="my_select_plan_five">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="6128.5">Full payment $6,370.00 USD</option>
-                <option value="1493.5">Or:1st Deposit:$1,450.00 USD</option>
-                <option value="4635">Full Balance:  $4,920.00 USD</option>
-                <option value="1545">OR 2nd deposit $1500.00 USD</option>
-                <option value="1545">3rd deposit $1500.00 USD</option>
-                <option value="1545">4th deposit $1500.00 USD</option>
-                <option value="432.6">5th deposit $420.00 USD</option>
-              </select>
-            </div>
-            <!--Plan A end--> 
-            
-            <strong>OR</strong><br />
-            <br />
-            <div class="form-row"><strong>Select 3 Travelers</strong>:<br />
-              <select name="os5" class="textfeild1" id="my_select_plan_six">
-                <option value="0" selected="selected">Select Plan one</option>
-                <option value="" disabled="disabled">---------------------------------------------</option>
-                <option value="9192.75">Full payment $9,555.00 USD</option>
-                <option value="2240.25">Or:1st Deposit:$2,175.00 USD</option>
-                <option value="6952.5">Full Balance:  $7,380.00 USD</option>
-                <option value="2317.5">OR 2nd deposit $2,250.00 USD</option>
-                <option value="2317.5">3rd deposit $2,250.00 USD</option>
-                <option value="2317.5">4th deposit $2,250.00 USD</option>
-                <option value="772.5">5th deposit $750.00 USD</option>
-              </select>
-            </div>
-            <!--Plan A end-->
-            <!--Plan A end-->
-            
-            <div class="form-row">
-              <label> <strong>First Name</strong>:<br />
-                <input type="text" size="20" data-stripe="number" id="first_name" name="first_name" value="" class="textfeild1" placeholder="First Name*" required />
-              </label>
-            </div>
-            <div class="form-row">
-              <label> <strong>Last name</strong>:<br />
-                <input type="text" size="20" data-stripe="number" id="last_name" name="last_name" value="" class="textfeild1" placeholder="Last name*" required />
-              </label>
-            </div>
-            <div class="form-row">
-              <label> <strong>Card Number </strong>:<br />
-                <input type="text" size="20" data-stripe="number" id="card_number" name="card_number" value="" class="textfeild1" placeholder="Card Number"/>
-              </label>
-            </div>
-            <div class="form-row">
-              <label> <strong>CVC</strong>:<br />
-                <input type="text" size="4" data-stripe="cvc" id="card_password" name="card_password" value="" class="textfeild2" placeholder="XXX"/>
-              </label>
-            </div>
-            <div class="form-row">
-              <label> <span><strong>Expiration</strong> (MM/YYYY)</span> :<br />
-                <input type="text" size="2" data-stripe="exp-month" id="exp_month" name="exp_month" value="" class="textfeild2" placeholder="MM"/>
-              </label>
-              <span> / </span>
-              <input type="text" size="4" data-stripe="exp-year" id="exp_year" name="exp_year" value="" class="textfeild2" placeholder="YYYY"/>
-            </div>
-            <div>&nbsp;</div>
-            <button type="submit" class="submit">Make A Payment</button>
-          </form>
-          <!--credit card payment end-->
-          
-          <p>&nbsp;</p>
-        </div>
-      </div>
-      <!--Main contant end--> 
-      
-      <!--right section start-->
-      <?php get_template_part( 'right', 'sidebar' );?>
-      <!--right section end-->
-      
-      <div class="clear">&nbsp;</div>
-    </div>
-  </div>
-</div>
-<?php get_footer(); ?>
+<p>Medical Education</p>
+<p>16-20 contact hours for CMEs and CEUs:</p> 
+<p>"Poisoning & Addiction for the Non-Specialist"</p> 
+<p>Physicians: $300; Non-physicians:$200</p>
+
+<p>Single room occupancy: $980</p>
+<p>Final itinerary will be made available 14 days before the trip.</p>
+
+<h3>Registration: exclusively online</h3>
+<strong>at TraveloGanza.com</strong>
+
+
+
+<p><h4><br><strong>Contact: </strong></br></h4></p>
+<p><strong>TraveloGanza.com; </strong></p>
+<p><strong>info@TraveloGanza.com; </strong></p>
+<p><strong>973 666 0930</strong></p><br/>
+
+<h4>ALL REGISTRATIONS AND PAYMENTS END ON<br>
+February 7, 2017.</h4>
+<p>Due to the discounted nature of this trip:</p>
+<p>All balances must be paid before February 7,</p>
+<p>56 days before departure.</p>
+
+<p>The $585-deposit is nonrefundable.</p>
+<p>Beyond the deposit, 80% of the balance is refundable before February 7.</p>
+<p>No payment is refundable after February 7.</p>
+
+
+<h4>REQUESTED DOCUMENTS</h4>
+<p>Requested documents, such as passport (copy of photo page), visa applications, etc.</p>
+<p>must reach Travel-O-Ganza before the final deadline.</p>
+<p>Processing is free before February 7, the deadline for all payments.</p>
+<p>A $50 processing fee will be assessed after the final deadline (as of February 8).</p>
+
+
+
+<h3>Insurance:</h3> 
+
+<p>Acquisition of travel insurance is a requisite.</p>
+<p>Travel O Ganza’s responsibilities are limited only to provision</p> 
+<p>of accommodation, meals and entertainment. </p>
+
+<p>Travel-O-Ganza endorses NO responsibility </p>
+<p>for  accidents, illnesses, loss of luggage, acts of nature, acts of terror... </p>
+<p>and in any traveler's conflict with any independent provider, person or entity.</p>
+
+<p>Travel O Ganza encourages all travelers to acquire </p>
+<p>comprehensive insurance against such incidents.</p><br/>
+
+<h2>Traveler's responsibilities:</h2>
+
+<p>The traveler is required to meet all deadlines.</p>
+<p>All travelers are responsible to read this contract </p>
+<p>and all related mailed or emailed correspondence.</p>
+<br/>
+<p>Collected personal information will be kept strictly confidential</p>
+<p>and used solely for the purpose of this activity.</p>
+<p>It is incumbent to the travelers to print this contractual agreement for future reference.</p>
+
+<p>Travel-O-Ganza is entitled to refuse services to any disruptive or uncooperative traveler.</p>
+
+
+<p>Production: Travel-O-Ganza, Inc</p>
+<p>The Melting Pot for Cultures and Education</p><br/>
+<h4>Please proceed with registration and payment</h4>
+<h4>ONLY if you agree to the above terms.</h4>
+
+  <a href="http://traveloganza.com/france-2016-eurocup-adventure-registration/"><img border="0" width="200" height="53" src="http://traveloganza.com/wp-content/themes/traveloganza/images/register.png"></a><br>
+  <a href="http://traveloganza.com/france-2016-eurocup-adventure-payment/" target="_self"><img border="0" width="167" height="54" src="http://traveloganza.com/wp-content/themes/traveloganza/images/paybtn.png"></a></p>
+<p align="center"><br>
+</p></div>
+</body>
+</html>
