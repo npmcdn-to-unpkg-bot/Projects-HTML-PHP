@@ -12,6 +12,6 @@ var url = document.URL
 var last_url=url.substr(url.lastIndexOf('#') + 1);
 console.log(last_url);	
 if(last_url != '!/main' ){
-	location.href='http://localhost/Projects/kevincluse/Main/index.html#!/main';
+	location.href='http://fahrschule-ginter.de/index.html#!/main';
 	}
 });

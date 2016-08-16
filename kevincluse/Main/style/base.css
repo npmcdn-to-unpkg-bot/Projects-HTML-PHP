@@ -242,9 +242,10 @@
 
         .layout-1-left 
         {
-            width:89%; 
+            width:74%; 
             clear:both;
-            float:left; 
+            float:left;
+			min-height:158px; 
         }
 
         .layout-1-right 
@@ -407,7 +408,7 @@
     {
         width:100%;
     }
-    
+   
         div.header a.header-logo
         {
             width:600px;
