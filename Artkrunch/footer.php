@@ -3,7 +3,6 @@
     <div class="footer-upper">
 		<div class="auto-container">
 			<div class="clearfix"> 
-			
 				<!--Two 4th column-->
 				<div class="col-md-6 col-sm-12 col-xs-12">
 					<div class="row clearfix"> 
