@@ -358,7 +358,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			
 			
 			<!--Main Footer-->

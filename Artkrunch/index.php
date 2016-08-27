@@ -25,7 +25,196 @@
 		<div class="page-wrapper"> 
 			<?php include("menu.php"); ?>
 			
-			
+			<!-- Main Slider
+			<section class="main-slider style-one default-banner">
+				<div class="tp-banner-container">
+					<div class="tp-banner" >
+						<ul>
+							<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/background-1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">								<img src="images/main-slider/background-1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+								<div class="tp-caption lfb tp-resizeme"
+										data-x="left" data-hoffset="15"
+										data-y="center" data-voffset="-80"
+										data-speed="1500"
+										data-start="500"
+										data-easing="easeOutExpo"
+										data-splitin="none"
+										data-splitout="none"
+										data-elementdelay="0.01"
+										data-endelementdelay="0.3"
+										data-endspeed="1200"
+										data-endeasing="Power4.easeIn"
+										style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+									<div class="title">
+										<h3>A work of art, </h3>
+										<br>
+										<h2>For branding that sells</h2>
+									</div>
+								</div>
+								<div class="tp-caption lfb tp-resizeme"
+										data-x="left" data-hoffset="15"
+										data-y="center" data-voffset="55"
+										data-speed="1500"
+										data-start="1000"
+										data-easing="easeOutExpo"
+										data-splitin="none"
+										data-splitout="none"
+										data-elementdelay="0.01"
+										data-endelementdelay="0.3"
+										data-endspeed="1200"
+										data-endeasing="Power4.easeIn"
+										style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+									<div class="slide-text">
+										<p>											When it comes to graphic design, don't settle for less than the best! 											<br>
+											Discover the difference beautiful graphic web design can make,											<br>
+											and let us help you personalize YOUR branding today!										</p>
+									</div>
+								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="left" data-hoffset="15"
+									data-y="center" data-voffset="160"
+									data-speed="1500"
+									data-start="1500"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">									
+									<div class="link-btn">										<a href="#" class="light-btn">Read More</a>									</div>
+								</div>
+								<div class="tp-caption lfr tp-resizeme"
+									data-x="right" data-hoffset="-15"
+									data-y="center" data-voffset="0"
+									data-speed="1500"
+									data-start="2000"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">																		<img src="images/main-slider/image-1.png" alt="">								</div>
+							</li>
+							<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/background-1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">								<img src="images/main-slider/background-1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+								<div class="tp-caption lft tp-resizeme"
+									data-x="center" data-hoffset="0"
+									data-y="center" data-voffset="-80"
+									data-speed="1500"
+									data-start="500"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">									<img src="images/main-slider/image-2.png" alt="">								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="0"
+									data-y="center" data-voffset="170"
+									data-speed="1500"
+									data-start="1000"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+									<div class="big-title">
+										<h2>Dynamic Designs for small business & professionals </h2>
+									</div>
+								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="0"
+									data-y="center" data-voffset="250"
+									data-speed="1500"
+									data-start="1500"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+																		<div class="medium-text text-center">
+										<p>											When it comes to graphic design, don't settle for less than the best! Discover how we can turn your 											branding into a profit-making machine. 										</p>
+									</div>
+								</div>
+							</li>
+							<li data-transition="slidedown" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/background-1.jpg"  data-saveperformance="off"  data-title="Video Background">								<img src="images/main-slider/background-1.jpg"  alt="Explore"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="0"
+									data-y="center" data-voffset="-100"
+									data-speed="1500"
+									data-start="1000"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+									<div class="big-title">
+										<h3>Marketing considerations and ideas for start-ups and small businesses</h3>
+									</div>
+								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="0"
+									data-y="center" data-voffset="-5"
+									data-speed="1500"
+									data-start="1500"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+									<div class="medium-text text-center">
+										<p>											Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour of this randomised <br>
+											words There are many variations of passages.This is Photoshop's version  of Lorem Ipsum.										</p>
+									</div>
+								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="-80"
+									data-y="center" data-voffset="80"
+									data-speed="1500"
+									data-start="2000"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap; text-align:center;">																		<a href="#" class="theme-btn dark-btn">Read More</a>								</div>
+								<div class="tp-caption lfb tp-resizeme"
+									data-x="center" data-hoffset="80"
+									data-y="center" data-voffset="80"
+									data-speed="1500"
+									data-start="2000"
+									data-easing="easeOutExpo"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.3"
+									data-endspeed="1200"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap; text-align:center;">																		<a href="#" class="theme-btn dark-btn">Contact Now</a>								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			-->
 			
 			<section class="services-section new-page-fnt">
 				<div class="auto-container">
@@ -197,209 +386,9 @@
 			
 			<?php include("portfolio-list.php"); ?>
 			
-						<!--<?php include("price.php"); ?>	-->
-                        <!--Price List star-->
-                         <section class="pricing-section">
-                         <div class="auto-container">
-    <div class="row clearfix" style="padding:0px 15px;">
-      <div class="col-md-4 col-sm-12 col-xs-12 a-p0 hidden-xs">
-        <div class="a-price-side">
-          <div class="a-proce-header">
-            <h2 class="price-header-a">Price Table</h2>
-            <p>Proin gravida nibh vel aliquet. </p>
-          </div>
-          <div class="a-proce-box">Web Space</div>
-          <div class="a-proce-box2">Monthly Bandwidth</div>
-          <div class="a-proce-box">Database</div>
-          <div class="a-proce-box2">.Com,.Net,.Biz,.Info</div>
-          <div class="a-proce-box">Email Accounts</div>
-          <div class="a-proce-box2">Server Type</div>
-          <div class="a-proce-box">Domain Host</div>
-          <div class="a-proce-box2">MsSQL Databases</div>
-          <div class="a-proce-box">MsSQL Databases</div>
-          <div class="a-proce-box2">Setup Fee</div>
-          <div class="a-proce-box">Programming</div>
-          <div class="a-proce-box2">Control Panel</div>
-          <div class="a-proce-box">Guarantee</div>
-          <div class="" style="min-height:60px;"></div>
-          <div class="" style="min-height:90px;"></div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-xs-12 hidden-lg a-p0">
-        <div class="">
-          <h2 class="price-header-a">Price Table</h2>
-          <p>Proin gravida nibh vel aliquet. </p>
-        </div>
-      </div>
-      <div class="col-md-8 col-sm-12 col-xs-12 a-p0">
-        <article class="col-md-4 col-sm-6 col-xs-12 table-block wow fadeIn a-p0-1" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <div class="">
-            <div class="a-proce-header">
-              <div class="a-pr-head-top"> ECONOMIC </div>
-              <div class="a-pr-head-price">
-                <h3>$60 USD</h3>
-                <p>PER YEAR</p>
-              </div>
-            </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Web Space</div>
-              6 GB </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Monthly Bandwidth</div>
-              60 </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Database</div>
-              MySQL </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">.Com,.Net,.Biz,.Info</div>
-              FREE </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Email Accounts</div>
-              30 </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Server Type</div>
-              Linux/Windows </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Domain Host</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">MsSQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">MySQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Setup Fee</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Programming</div>
-              PHP & More </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Control Panel</div>
-              cPanel/Plesk </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Guarantee</div>
-              30 days money back </div>
-            <div class="a-proce-box-last"> available classes for toggling content </div>
-            <div class="a-proce-subs-btn">
-              <button type="button" class="btn btn-success">Subscribe</button>
-            </div>
-          </div>
-        </article>
-        <article class="col-md-4 col-sm-6 col-xs-12 table-block wow fadeIn a-p0-1" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div class="">
-            <div class="a-proce-header">
-              <div class="a-pr-head-top-middle"> LITE </div>
-              <div class="a-pr-head-price-middle">
-                <h3>$99 USD</h3>
-                <p>PER YEAR</p>
-              </div>
-            </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Web Space</div>
-              10 GB </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Monthly Bandwidth</div>
-              100 GB </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Database</div>
-              MySQL </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">.Com,.Net,.Biz,.Info</div>
-              FREE </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Email Accounts</div>
-              50 </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Server Type</div>
-              Linux/Windows </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Domain Host</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">MsSQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">MySQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Setup Fee</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Programming</div>
-              PHP & More </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Control Panel</div>
-              cPanel/Plesk </div>
-            <div class="a-proce-box-middle">
-              <div class="visible-xs">Guarantee</div>
-              30 days money back </div>
-            <div class="a-proce-box-middle-last"> available classes for toggling content </div>
-            <div class="a-proce-subs-btn-middle">
-              <button type="button" class="btn btn-success">Subscribe</button>
-            </div>
-          </div>
-        </article>
-        <article class="col-md-4 col-sm-6 col-xs-12 table-block wow fadeIn a-p0-1" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <div class="">
-            <div class="a-proce-header">
-              <div class="a-pr-head-top"> ULTIMATE </div>
-              <div class="a-pr-head-price">
-                <h3>$1000 USD</h3>
-                <p>PER YEAR</p>
-              </div>
-            </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Web Space</div>
-              Unlimited </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Monthly Bandwidth</div>
-              Unlimited </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Database</div>
-              MySQL </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">.Com,.Net,.Biz,.Info</div>
-              FREE </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Email Accounts</div>
-              150 </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Server Type</div>
-              Linux/Windows </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Domain Host</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">MsSQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">MySQL Databases</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Setup Fee</div>
-              <i class="fa fa-check"></i> </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Programming</div>
-              PHP & More </div>
-            <div class="a-proce-box2">
-              <div class="visible-xs">Control Panel</div>
-              cPanel/Plesk </div>
-            <div class="a-proce-box">
-              <div class="visible-xs">Guarantee</div>
-              30 days money back </div>
-            <div class="a-proce-box-last"> available classes for toggling content </div>
-            <div class="a-proce-subs-btn">
-              <button type="button" class="btn btn-success">Subscribe</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-                        </section>
-                        <!--Price List end-->		
-			             <section class="new-tab-botm new-page-fnt">
+						<?php include("price.php"); ?>			
+		 
+			<section class="new-tab-botm new-page-fnt">
 				<div class="auto-container">
 					<div class="row clearfix">
 						
